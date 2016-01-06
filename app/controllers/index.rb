@@ -1,3 +1,3 @@
 get '/' do
-  redirect :"/users"
+  redirect :"/things"
 end

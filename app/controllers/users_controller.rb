@@ -19,7 +19,7 @@ post '/users' do
   if @user.save
     redirect '/'
   else
-    @errors = ["Invalid username or password ."]
+    @errors = ["Invalid username or password."]
     erb :'/users/new'
   end
 end
