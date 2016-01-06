@@ -5,4 +5,4 @@ helpers do
   end
 end
 
-helpers DateFormatting
+# helpers DateFormatting

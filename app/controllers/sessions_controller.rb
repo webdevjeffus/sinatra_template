@@ -1,4 +1,4 @@
-et '/sessions/new' do
+get '/sessions/new' do
   erb :'/sessions/new'
 end
 
