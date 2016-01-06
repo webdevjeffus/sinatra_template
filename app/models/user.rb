@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
                         uniqueness: { case_sensitive: false },
                         length: { in: 4..20 }
 
-  # has_many  :things
+  has_many  :things
 
   def password
     @password ||= Password.new(password_hash)
