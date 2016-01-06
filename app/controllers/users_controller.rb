@@ -1,5 +1,5 @@
 get '/users' do
-  @users = Users.all
+  @users = User.all
   erb :'/users/index'
 end
 
@@ -9,7 +9,7 @@ end
 
 get '/users/:id' do
   @user = User.find_by(id: params[:id])
-  @entries = @user.entries
+  @things = @user.things
   erb :"/users/show"
 end
 
