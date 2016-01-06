@@ -1,10 +1,15 @@
+get '/users' do
+  @users = User.all
+  erb :'/users/index'
+end
+
 get '/users/new' do
-  erb :'users/new'
+  erb :'/users/new'
 end
 
 get '/users/:id' do
   @user = User.find_by(id: params[:id])
-  @entries = @user.entries
+  @things = @user.things
   erb :"/users/show"
 end
 
@@ -14,7 +19,7 @@ post '/users' do
   if @user.save
     redirect '/'
   else
-    @errors = ["Invalid username or password ."]
-    erb :'users/new'
+    @errors = ["Invalid username or password."]
+    erb :'/users/new'
   end
 end
