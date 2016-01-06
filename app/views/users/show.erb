@@ -1,0 +1,14 @@
+<h2>User Profile: <%= @user.username %></h2>
+
+<h3>Posts:</h3>
+<ul>
+  <% @entries.each do |entry| %>
+    <li>
+      <p><a href="/entries/<%= entry.id %>"><%= entry.title %></a></p>
+    </li>
+  <% end %>
+</ul>
+
+<% if logged_in? && @user == current_user %>
+  <a href="/entries/new">Create a new post</a>
+<% end %>
