@@ -4,11 +4,17 @@
   <input type="hidden" name="_method" value="PUT" />
 
   <label for="thing-name">Name of the thing:</label>
-  <input id="thing-name" type="text" name="thing[name]" value="<%= @thing.name %>" required />
+  <input id="thing-name" type="text" name="thing[name]" value="<%= @thing.name %>" minlength=4 maxlength=64 required />
 
   <label for="thing-description">Description of the thing:</label>
-  <textarea id="thing-description" name="thing[description]" required><%= @thing.description %></textarea>
+  <textarea id="thing-description" name="thing[description]" minlength=3 maxlength=250 required><%= @thing.description %></textarea>
 
   <input type="submit" value="Save Changes" />
 
 </form>
+
+<% if @errors %>
+  <p class="error">
+    <%= @errors %>
+  </p>
+<% end  %>

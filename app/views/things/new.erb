@@ -3,11 +3,17 @@
 <form method="POST" action="/things" >
 
   <label for="thing-name">Name:</label>
-  <input id="thing-name" type="text" name="thing[name]" required />
+  <input id="thing-name" type="text" name="thing[name]" minlength=4 maxlength=64 required />
 
   <label for="thing-description">Description:</label>
-  <textarea id="thing-description" name="thing[description]" required></textarea>
+  <textarea id="thing-description" name="thing[description]" minlength=3 maxlength=250 required></textarea>
 
   <input type="submit" value="Save Thing" />
 
 </form>
+
+<% if @errors %>
+  <p class="error">
+    <%= @errors %>
+  </p>
+<% end  %>

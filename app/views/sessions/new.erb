@@ -11,9 +11,7 @@
 </form>
 
 <% if @errors %>
-  <ul>
-    <% @errors.each do |message| %>
-      <li class="error"><%= message %></li>
-    <% end %>
-  </ul>
+  <p class="error">
+    <%= @errors %>
+  </p>
 <% end  %>

@@ -4,6 +4,7 @@ get '/things' do
 end
 
 get '/things/new' do
+  @errors = params[:errors]
   erb :"/things/new"
 end
 
