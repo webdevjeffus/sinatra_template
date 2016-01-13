@@ -4,6 +4,7 @@ get '/users' do
 end
 
 get '/users/new' do
+  @errors = params[:errors]
   erb :'/users/new'
 end
 
@@ -14,12 +15,12 @@ get '/users/:id' do
 end
 
 post '/users' do
-  @user = User.new(username: params[:username])
-  @user.password = params[:password]
-  if @user.save
+  user = User.new(username: params[:username])
+  user.password = params[:password]
+  if user.save
     redirect '/'
   else
-    @errors = ["Invalid username or password."]
-    erb :'/users/new'
+    errors = "Invalid username or password."
+    redirect "/users/new?errors=#{errors}"
   end
 end
