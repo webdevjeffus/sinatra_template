@@ -36,12 +36,26 @@ for coining the name "jeffstrap".
 \************************************************/
 
 
+/***
+Butter #f3d494
+Goldenrod #f2bd5f
+Orange  #f4992e
+Pumpkin   #f07400
+
+Light Blue #158496
+Blue    #106270
+Dark Blue #0b454f
+
+
+***/
+
+
 /* GENERAL STYLES */
 
 html {
   box-sizing: border-box;
-  background-color: #888;
-  color: #ddd;
+  background-color: #f07400;
+  color: #f4992e;
   font-size: 12px;
   line-height: 1.4;
 }
@@ -56,8 +70,9 @@ body {
   min-width: 320px;
   max-width: 400px;
   margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
-  background-color: #222;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #0b454f;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -66,7 +81,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3 {
-  font-family: Bangers, sans-serif;
+  /*font-family: Bangers, sans-serif;*/
+  font-family: 'Amatic SC', cursive;
   letter-spacing: 0.075rem;
 }
 
@@ -86,16 +102,26 @@ p {
   margin: 0.5rem 0;
 }
 
+
+/*
+Light Blue #158496
+Blue    #106270
+Dark Blue #0b454f
+
+Orange  #f4992e
+Pumpkin   #f07400
+*/
+
 a:link,
 a:visited {
-  color: #cc0000;
+  color: #106270;
   font-weight: bold;
   text-decoration: none;
 }
 
 a:hover,
 a:active {
-  color: #ff2222;
+  color: #158496;
   font-weight: bold;
   text-decoration: none;
 }
@@ -104,6 +130,7 @@ a:active {
 
 header {
   padding: 1rem;
+  color: #f2bd5f;
 }
 
 header h1 {
@@ -121,7 +148,7 @@ header ul li {
 
 header ul li {
   padding: 0 0.5rem;
-  border-left: 2px solid #444;
+  border-left: 1px solid #f2bd5f;
 }
 
 header ul li:first-child {
@@ -133,24 +160,31 @@ header ul li input[type="submit"] {
   text-align: center;
   width: auto;
   border: none;
-  background-color: #222;
-  color: #c00;
+  background-color: #0b454f;
+  color: #f07400;
   font-weight: bold;
 }
 
+header a:link,
+header a:visited {
+  color: #f07400;
+}
+
+header a:hover,
+header a:active,
 header ul li input[type="submit"]:hover,
 header ul li input[type="submit"]:active {
-  color: #f22;
+  color: #f4992e;
 }
 
 
 /* MAIN STYLES - within YIELD block */
 
 main {
-  color: #222;
+  color: #0b454f;
   clear: both;
   padding: 1rem;
-  background-color: #ddd;
+  background-color: #f3d494;
 }
 
 main ul {
@@ -159,7 +193,7 @@ main ul {
 
 main ul li {
   list-style: none;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 1rem;
   font-size: 1.25rem;
 }
 
@@ -174,7 +208,7 @@ main input[type="text"] {
 }
 
 main input[type="submit"] {
-  width: 10rem;
+  width: 12rem;
 }
 
 main textarea {
