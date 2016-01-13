@@ -239,7 +239,8 @@ main td {
 }
 
 .error {
-  color: #d00;
+  color: #f07400;
+  font-size: 1.25rem;
   font-weight: bold;
   text-align: center;
 }
