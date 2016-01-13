@@ -2,10 +2,10 @@
 
 <form action="/users" method="POST">
   <label for='username_input'>Username</label>
-  <input type='text' name='username' id='username_input' required/>
+  <input type='text' name='username' id='username_input' minlength=4 maxlength=20 required />
 
   <label for='password_input'>Password</label>
-  <input type='password' name='password' id='password_input' required/>
+  <input type='password' name='password' id='password_input' minlength=8 maxlength=16 required />
 
   <input type='submit' value='Create Account'/>
 </form>
